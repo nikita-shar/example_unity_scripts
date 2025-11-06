@@ -65,7 +65,6 @@ public class AU1FillFromOutline : MonoBehaviour
                 validCount++;
             }
         }
-        
         return validCount > 0 ? sum / validCount : Vector3.zero;
     }
 
@@ -185,6 +184,7 @@ public class AU1FillFromOutline : MonoBehaviour
             }
         }
     }
+    
     float DisplacementFromNeutral(Mesh currentMesh, List<int> indices, Vector3 neutralPosition)
     {
         if (currentMesh == null || indices == null || indices.Count == 0) return 0f;
@@ -198,8 +198,7 @@ public class AU1FillFromOutline : MonoBehaviour
         return displacement;
     }
 
-    static void FillPolygon(Mesh mesh, List<int> outline, float shrink,
-                            byte r, byte g, byte b, byte a, Color32[] colors)
+    static void FillPolygon(Mesh mesh, List<int> outline, float shrink, byte r, byte g, byte b, byte a, Color32[] colors)
     {
         if (outline == null || outline.Count < 3) return;
 
@@ -269,5 +268,6 @@ public class AU1FillFromOutline : MonoBehaviour
         return inside;
     }
 }
+
 
 
